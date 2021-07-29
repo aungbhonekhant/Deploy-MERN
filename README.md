@@ -163,8 +163,9 @@
 
 repository မှာ project forder တွေကို တင်ပြီးပီလို့ ယူဆပါမယ်။
 
- > *note -- local မှာ port ခွဲ သုံးမှာ ဖြစ်တွက် အတွက် NodeJs project ရဲ့ index.js or server.js မှာ `app.use(cors());` ကိုသုံးရပါမယ်*
- > *note -- React router တွေ အတွက် react project တွေရဲ့ `package.json` file မှာ `"homepage": ".",` ထည့်ပေးရပါမယ်။ *
+ > *note -- 
+   - local မှာ port ခွဲ သုံးမှာ ဖြစ်တွက် အတွက် NodeJs project ရဲ့ index.js or server.js မှာ `app.use(cors());` ကိုသုံးရပါမယ်*
+   - React router တွေ အတွက် react project တွေရဲ့ `package.json` file မှာ `"homepage": ".",` ထည့်ပေးရပါမယ်။ *
  
 
   ```
