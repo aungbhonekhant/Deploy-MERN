@@ -124,6 +124,23 @@
    
     nano /etc/nginx/sites-available/ecommerce
    
+    ```
+    server {
+      listen 80;
+
+      location / {
+           root /var/www/netflix;
+           index  index.html index.htm;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+           try_files $uri $uri/ /index.html;
+      }
+    }
+   ```
+
    sites-available ထဲမှာ ရေးသမျှ sites-enabled ထဲမှာလဲ တစ်ခါတည်း ပြင်သွား ဖို့ အတွက်
    
     
