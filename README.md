@@ -105,3 +105,27 @@
    ufw allow "Nginx Full"
    ```
    terminal က SSH client ဝင်လို့မရ ပါက port 22 ကို allow လုပ်ပေးဖို့ လိုပါတယ်။
+
+## First Page
+### Delete the default server configuration
+   
+   /etc/nginx/sites-available/default ကို edit လုပ်ပြီး သုံလို့ ရပေမဲ့ project တစ်ခု မက သုံး တဲ့ အခါ အဆင်ပြေ အောင် default file ကို ဖျက်ပြီး အသစ် လုပ်ပါမယ်။
+   
+   ```
+   rm /etc/nginx/sites-available/default
+   ```
+   
+   ```
+   rm /etc/nginx/sites-enabled/default
+   ```
+   
+### First configuration
+ 
+    ```
+    nano /etc/nginx/sites-available/netflix
+    ```
+   sites-available ထဲမှာ ရေးသမျှ sites-enabled ထဲမှာလဲ တစ်ခါတည်း ပြင်သွား ဖို့ အတွက်
+   
+    ```
+    ln -s /etc/nginx/sites-available/ecommerce /etc/nginx/sites-enabled/ecommerce
+    ```
