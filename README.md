@@ -121,8 +121,9 @@
    
 ### First configuration
  
-   
+   ```
     nano /etc/nginx/sites-available/ecommerce
+   ```
    
     ```
     server {
@@ -143,6 +144,7 @@
 
    sites-available ထဲမှာ ရေးသမျှ sites-enabled ထဲမှာလဲ တစ်ခါတည်း ပြင်သွား ဖို့ အတွက်
    
-    
+    ```
     ln -s /etc/nginx/sites-available/ecommerce /etc/nginx/sites-enabled/ecommerce
+    ```
     
