@@ -224,7 +224,7 @@ repository မှာ project forder တွေကို တင်ပြီးပ�
   ```
   .env ထဲက code တွေကူး ထည့်ပြီး save ပါ။
   
-  > *mongodb atlas သုံးထားရင် IP list မှာ VPS IP Address ကို ထည့်ပေးဖို့လိုပါတယ်။
+  > mongodb atlas သုံးထားရင် IP list မှာ VPS IP Address ကို ထည့်ပေးဖို့လိုပါတယ်။
   
   ```
   node index.js
