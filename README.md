@@ -258,3 +258,9 @@ repository မှာ project forder တွေကို တင်ပြီးပ�
   ```
   npm install
   ```
+
+ Create Build file
+
+  ```
+  npm run build
+  ```
