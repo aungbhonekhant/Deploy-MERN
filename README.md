@@ -163,7 +163,7 @@
 
 repository မှာ project forder တွေကို တင်ပြီးပီလို့ ယူဆပါမယ်။
 
- > *note -- - local မှာ port ခွဲ သုံးမှာ ဖြစ်တွက် အတွက် NodeJs project ရဲ့ index.js or server.js မှာ `app.use(cors());` ကိုသုံးရပါမယ်
+ > *note
  > - local မှာ port ခွဲ သုံးမှာ ဖြစ်တွက် အတွက် NodeJs project ရဲ့ index.js or server.js မှာ `app.use(cors());` ကိုသုံးရပါမယ်
  > - React router တွေ အတွက် react project တွေရဲ့ `package.json` file မှာ `"homepage": ".",` ထည့်ပေးရပါမယ်။ *
    
@@ -184,4 +184,48 @@ repository မှာ project forder တွေကို တင်ပြီးပ�
   git clone <your repository>
   ```
 
-## Nginx Configuration for new apps
+## Nginx Configuration for Nodejs Api apps
+
+   ```
+   nano /etc/nginx/sites-available/netflix
+   ```
+   
+   ```
+   location /api {
+        proxy_pass http://{IP- Address}:{App port};
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+  }
+  ```
+
+  browser မှာ ip-address/api ကို ခေါ်ကြည့်ရင် `502` error ကို တွေရမှာပါ။ configuration လုပ်တာ အောင်မြင် ပါတယ်။ App ကို run ဖို့ install အနည်းငယ်လုပ်ဖို့ လိုပါသေးတယ်။
+  
+  ```
+  apt install nodejs
+  ```
+  
+  ```
+  apt install npm
+  ```
+  
+  ```
+  cd api
+  ```
+  
+  ```
+  npm install
+  ```
+  
+  ```
+  nano .env
+  ```
+  .env ထဲက code တွေကူး ထည့်ပြီး save ပါ။
+  
+  > *mongodb atlas သုံးထားရင် IP list မှာ VPS IP Address ကို ထည့်ပေးဖို့လိုပါတယ်။
+  
+  ```
+  node index.js
+  ```
