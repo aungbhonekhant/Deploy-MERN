@@ -9,9 +9,9 @@
    4. passphrase (တစ်နည်းအားဖြင့် ဒီ SSH key ရဲ့ password လို့ အလွယ်မှတ်နိုင်) ကို type လုပ်ပါ။ **< NOTE. ရိုက်လိုက်တဲ့ စာလုံးတွေ terminal တွင်မပေါ်ပါ။ >**
    5. passpharse ကို confirm လုပ်ပါ။ အောင်တွင်ပြထားသည့် စာလုံးတွေနှင့် ဆင်တူတဲ့ output ရပါလိမ့်မည် ->
 
-     Your public key has been saved in /Users/lamadev/.ssh/id_rsa.pub.
+     Your public key has been saved in /home/{your user name path}/.ssh/id_rsa .pub.
       The key fingerprint is:
-      ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:30 lamadev@mac.local
+      ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:30 name@example
       The key's randomart image is:
       +--[ RSA 2048]----+
       |                 |
@@ -37,3 +37,71 @@
 ## Connection
 
    SSH key ကို copy လုပ်ပြီး ကိုယ် ဝယ်ထားတဲ့ hosting service privider (eg. digitalocean, hostinger) ရဲ့ dashboard က SSH key နေရာမှာ ထည့်ပါ။ save လုပ်ပါ။ 
+
+### For MAC OS / Linux
+
+    ```
+    sudo ssh -i ~{SSH-key-path}  {username}@{vps-IP}
+    ```
+    
+### For Windows
+
+   1. PuTTY app ကိုဖွင့်ပါ။
+   2. IP address ကိုဖြည့်ပါ။
+   3. Connection -> SSH -> Auth ကိုသွားပါ။
+   4. Browse ကိုနှိပ်ပြီး private key save ထားတဲ့ file လမ်းကြောင်းကို ရွေးပေးပါ။
+
+# First Configuration
+## Deleting apache server
+
+   တစ်ချို့  hosting တွေမှာ apache server တစ်ခါတည်း  install ထားပီးသား ပါတတ်ပါတယ်။ apache serverကို သုံးမယ်ဆိုရင် ဒီ အဆင့်ကို လုပ်စရာမလိုပါ။ 
+   ဒီမှာတော့ Nginx ကိုသုံးမှာ ဖြစ်တဲ့ အတွက် apache server ကို delete လုပ်မှာပါ။
+
+   ```
+   systemctl stop apache2
+   ```
+   
+   ```
+   systemctl disable apache2
+   ```
+   
+   ```
+   apt remove apache2
+   ```
+   
+   သက်ဆိုင်ရာ dependencies တွေကို delete လုပ်ဖို့အတွက်
+   
+   ```
+   apt autoremove
+   ```
+   
+## Cleaning and updating server
+
+   ```
+   apt clean all && sudo apt update && sudo apt dist-upgrade
+   ```
+   
+   ```
+   rm -rf /var/www/html
+   ```
+   
+## Installing Nginx
+
+   ```
+   apt install nginx
+   ```
+
+## Installing and configure Firewall
+
+   ```
+   apt install ufw
+   ```
+   
+   ```
+   ufw enable
+   ```
+   
+   ```
+   ufw allow "Nginx Full"
+   ```
+   terminal က SSH client ဝင်လို့မရ ပါက port 22 ကို allow လုပ်ပေးဖို့ လိုပါတယ်။
