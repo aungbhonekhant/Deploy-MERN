@@ -140,8 +140,8 @@
            try_files $uri $uri/ /index.html;
       }
     }
-   ```
-
+  
+   
    sites-available ထဲမှာ ရေးသမျှ sites-enabled ထဲမှာလဲ တစ်ခါတည်း ပြင်သွား ဖို့ အတွက်
    
     ```
