@@ -27,5 +27,5 @@
    6.`pbcopy < ~/.ssh/id_rsa.pub` ကိုသုံးပြီး SSH Key ကို copy လုပ်ပါ။
 
 ## For Windows
-1. PuTTY and PuTTYgen ကို download လုပ်ပါ။
-2. PyTTYgen ကို ဖွင့်ပြီး Generate ကိုနှိပ်ပါ။
+   1. PuTTY and PuTTYgen ကို download လုပ်ပါ။
+   2. PyTTYgen ကို ဖွင့်ပြီး Generate ကိုနှိပ်ပါ။
