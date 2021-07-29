@@ -154,8 +154,31 @@
     nano /var/www/ecommerce/index.html
     ```
 
-### Start Nginx and IP address ကို browser မှာ ရိုပြီး ကြည့်ပါဂ
+### Start Nginx and IP address ကို browser မှာ ရိုက်ပြီး ကြည့်ပါ။
 
     ```
     systemctl start nginx
     ```
+# Uploading Apps Using Git
+
+repository မှာ project forder တွေကို တင်ပြီးပီလို့ ယူဆပါမယ်။
+
+ > *note -- local မှာ port ခွဲ သုံးမှာ ဖြစ်တွက် အတွက် NodeJs project ရဲ့ index.js or server.js မှာ `app.use(cors());` ကိုသုံးရပါမယ်*
+ > *note -- React router တွေ အတွက် react project တွေရဲ့ `package.json` file မှာ `"homepage": ".",` ထည့်ပေးရပါမယ်။ *
+ 
+
+  ```
+  apt install git
+  ```
+  
+  ```
+  mkdir ecommerce
+  ```
+  
+  ```
+  cd ecommerce
+  ```
+  
+  ```
+  git clone <your repository>
+  ```
