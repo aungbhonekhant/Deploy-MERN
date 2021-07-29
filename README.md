@@ -24,8 +24,16 @@
       | o...o * o       |
       |.  oo.o .        |
       +-----------------+ 
-   6.`pbcopy < ~/.ssh/id_rsa.pub` ကိုသုံးပြီး SSH Key ကို copy လုပ်ပါ။
+    6.`pbcopy < ~/.ssh/id_rsa.pub` ကိုသုံးပြီး SSH Key ကို copy လုပ်ပါ။
 
 ## For Windows
-   1. PuTTY and PuTTYgen ကို download လုပ်ပါ။
-   2. PyTTYgen ကို ဖွင့်ပြီး Generate ကိုနှိပ်ပါ။
+
+  1. PuTTY and PuTTYgen ကို download လုပ်ပါ။
+  2. PyTTYgen ကို ဖွင့်ပြီး Generate ကိုနှိပ်ပါ။
+  3. key ကို copy လုပ်ပါ။ 
+  4. passphrase ကို သတ်မှတ်ပါ။ confirm လုပ်ပါ။
+  5. private key နဲ့ public key ကို Save လုပ်ပါ။
+
+## Connection
+
+   SSH key ကို copy လုပ်ပြီး ကိုယ် ဝယ်ထားတဲ့ hosting service privider (eg. digitalocean, hostinger) ရဲ့ dashboard က SSH key နေရာမှာ ထည့်ပါ။ save လုပ်ပါ။ 
