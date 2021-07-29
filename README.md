@@ -9,7 +9,6 @@
    4. passphrase (တစ်နည်းအားဖြင့် ဒီ SSH key ရဲ့ password လို့ အလွယ်မှတ်နိုင်) ကို type လုပ်ပါ။ **< NOTE. ရိုက်လိုက်တဲ့ စာလုံးတွေ terminal တွင်မပေါ်ပါ။ >**
    5. passpharse ကို confirm လုပ်ပါ။ အောင်တွင်ပြထားသည့် စာလုံးတွေနှင့် ဆင်တူတဲ့ output ရပါလိမ့်မည် ->
 
-     ```
      Your public key has been saved in /Users/lamadev/.ssh/id_rsa.pub.
       The key fingerprint is:
       ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:30 lamadev@mac.local
@@ -25,5 +24,8 @@
       | o...o * o       |
       |.  oo.o .        |
       +-----------------+ 
-    ```
    6.`pbcopy < ~/.ssh/id_rsa.pub` ကိုသုံးပြီး SSH Key ကို copy လုပ်ပါ။
+
+##For Windows
+1. PuTTY and PuTTYgen ကို download လုပ်ပါ။
+2. PyTTYgen ကို ဖွင့်ပြီး Generate ကိုနှိပ်ပါ။
