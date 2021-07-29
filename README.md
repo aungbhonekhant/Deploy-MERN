@@ -148,3 +148,14 @@
     ln -s /etc/nginx/sites-available/ecommerce /etc/nginx/sites-enabled/ecommerce
     ```
     
+### Write your fist message
+
+    ```
+    nano /var/www/ecommerce/index.html
+    ```
+
+### Start Nginx and IP address ကို browser မှာ ရိုပြီး ကြည့်ပါဂ
+
+    ```
+    systemctl start nginx
+    ```
